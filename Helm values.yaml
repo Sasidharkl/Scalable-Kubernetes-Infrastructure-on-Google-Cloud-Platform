@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: gcr.io/your-gcp-project-id/webapp
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  host: webapp.example.com
+  annotations:
+    kubernetes.io/ingress.class: "gce" 
+  tls: []
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
