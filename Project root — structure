@@ -1,0 +1,29 @@
+k8s-gcp-infra/
+├── README.md
+├── .gitignore
+├── terraform/
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── main.tf
+│   ├── node_pool.tf
+│   ├── gcr.tf
+│   ├── outputs.tf
+│   └── terraform.tfvars.example
+├── helm/
+│   ├── Chart.yaml
+│   ├── values.yaml
+│   └── templates/
+│       ├── deployment.yaml
+│       ├── service.yaml
+│       └── ingress.yaml
+├── monitoring/
+│   ├── prometheus-values.yaml
+│   └── grafana-values.yaml
+├── app/
+│   ├── Dockerfile
+│   ├── app.py
+│   └── requirements.txt
+├── scripts/
+│   ├── build_and_push.sh
+│   ├── deploy_helm.sh
+│   └── destroy_infra.sh
